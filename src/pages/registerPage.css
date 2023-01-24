@@ -11,39 +11,31 @@ body {
 	font-family: 'Mulish', sans-serif;
 	font-style: normal;
 	background: #F5F5F5;
+	overflow-x: hidden;
 }
 
-.register {
-	width: 1440px;
-	height: 789px;
+.register__container {
+	max-width: 1440px;
 	margin: 0 auto;
-	background: #FFFFFF;
+	padding: 0 15px;
 }
 
 .register__wrapper {
-	width: 100%;
-	height: 789px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 }
 
 .register__sidebar {
-	width: 678.56px;
-	height: 789px;
-	padding: 108px 0px 198.78px 65px;
+	padding: 108px 52.44px 199px 65px;
 	border-right: 2px solid #FFFFFF;
 }
 
-.register__logo-img {
-	width: 613.56px;
-	height: 482.22px;
-	border: 1px solid #FFFFFF;
-	border-radius: 16.8053px;
+.register__form {
+	padding: 117px 150px 0 56px;
 }
 
-.register__form {
-	width: 761.49px;
-	padding: 117px 150px 65px 71.44px;
+.register__form-block {
+	width: 540px;
 }
 
 .register__form-link {
@@ -73,11 +65,13 @@ body {
 	justify-content: space-between;
 }
 
-.register__input-Div {
-	margin-bottom: 34px;
+.register__input-Div+.register__input-Div {
+	margin-top: 34px;
 }
 
-.register__input-Div>label {
+.register__username-lable,
+.register__email-lable,
+.register__password-lable {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 25px;
@@ -97,6 +91,13 @@ body {
 	gap: 10px;
 }
 
+.register__checkbox {
+	width: 47.08px;
+	height: 36.99px;
+	border: 0.622334px solid #333539;
+	border-radius: 10.4585px;
+}
+
 .register__email-input,
 .register__username-input,
 .register__password-input {
@@ -108,14 +109,7 @@ body {
 	padding: 15px;
 }
 
-.register__checkbox {
-	width: 47.08px;
-	height: 36.99px;
-	border: 0.622334px solid #333539;
-	border-radius: 10.4585px;
-}
-
-.register__lable>span {
+.register__checkbox-lable>span {
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 18px;
@@ -140,7 +134,15 @@ body {
 	transition: 0.3s ease-in-out;
 }
 
-p {
+.register__forgot-pass-link {
+	display: none;
+}
+
+.register__form-double {
+	display: none;
+}
+
+.register__article {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 25px;
@@ -155,8 +157,8 @@ p {
 	margin: 15px 0px 136px 78px;
 }
 
-.google__signin,
-.facebook__signin {
+.google__signup,
+.facebook__signup {
 	width: 217.9px;
 	height: 45.73px;
 	padding: 9.92px 83.3px 11.32px 68.6px;
@@ -167,17 +169,221 @@ p {
 	cursor: pointer;
 }
 
-.google__signin:hover,
-.facebook__signin:hover {
+.google__signup:hover,
+.facebook__signup:hover {
 	background: #4845D6;
 	transition: 0.3s ease-in-out;
 }
 
-.google__signin-link,
-.facebook__signin-link {
+.google__signup-link,
+.facebook__signup-link {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 25px;
 	text-decoration: none;
 	color: #FFFFFF;
+}
+
+
+/*---------------- Media --------------*/
+
+@media (max-width: 800px) {
+	.register {
+		width: 744px;
+		margin: 0 auto;
+	}
+
+	.register__container {
+		padding: 45px 40px 120px;
+	}
+
+	.register__wrapper {
+		flex-direction: column;
+		align-items: center;
+		padding: 48px 59px 0px;
+	}
+
+	.register__sidebar {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 49.38px;
+	}
+
+	.register__logo-img>img {
+		width: 100%;
+	}
+
+	.register__form {
+		padding: 0;
+	}
+
+	.register__form-block {
+		padding-top: 38px;
+	}
+
+	.register__form-link {
+		padding-right: 263px;
+	}
+
+	.register__flex-Div {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 28px;
+		margin: 72.27px 0 44px;
+	}
+
+	.register__checkbox-Div {
+		display: none;
+	}
+
+	.register__forgot-pass-link {
+		display: block;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 25px;
+		text-decoration-line: underline;
+		color: #333539;
+		text-align: center;
+	}
+
+	.register__article {
+		margin: 0 0 13.33px 0;
+	}
+
+	.register__gf {
+		margin: 0;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 575px) {
+	.register {
+		width: 320px;
+	}
+
+	.register__container {
+		padding: 44px 21px 17px;
+	}
+
+	.register__wrapper {
+		padding: 0;
+	}
+
+	.register__sidebar {
+		margin-bottom: 9px;
+	}
+
+	.register__logo-img>img {
+		width: 100%;
+	}
+
+	.register__form {
+		width: 288px;
+	}
+
+	.register__form-block {
+		width: 100%;
+		padding: 35px 0 0;
+	}
+
+	.register__form-link {
+		display: none;
+	}
+
+	.register__input-Div {
+		flex-direction: column;
+	}
+
+	.register__input-Div+.register__input-Div {
+		margin-top: 15px;
+	}
+
+	.register__username-lable {
+		font-size: 16px;
+		line-height: 20px;
+		margin: 0 135px 7px 0;
+	}
+
+	.register__email-lable {
+		font-size: 16px;
+		line-height: 20px;
+		margin: 0 189px 7px 0;
+	}
+
+	.register__password-lable {
+		font-size: 16px;
+		line-height: 20px;
+		margin: 0 220px 7px 0;
+	}
+
+	.register__username-input,
+	.register__email-input,
+	.register__password-input {
+		width: 279.13px;
+		height: 37px;
+	}
+
+	.register__flex-Div {
+		margin: 42px 0 26px;
+	}
+
+	.register__btn {
+		width: 280.88px;
+		height: 47.4px;
+		font-size: 19.9571px;
+		line-height: 25px;
+	}
+
+	.register__form-double {
+		display: block;
+		text-align: center;
+	}
+
+	.register__form-double>p {
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 19px;
+		color: #333539;
+	}
+
+	.register__form-double>p>a {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 4rem;
+		text-decoration-line: underline;
+		color: #333539;
+	}
+
+	.register__forgot-pass {
+		margin-bottom: 44px;
+	}
+
+	.register__forgot-pass-link {
+		display: none;
+	}
+
+	.register__article {
+		font-size: 13px;
+		line-height: 16px;
+		margin: 0 0 20px 0;
+	}
+
+	.register__gf {
+		flex-direction: column;
+		align-items: center;
+		gap: 21px;
+	}
+
+	.google__signup,
+	.facebook__signup {
+		width: 201.97px;
+		height: 42.39px;
+	}
+
+	.google__signup-link,
+	.facebook__signup-link {
+		font-size: 18.538px;
+		line-height: 23px;
+	}
 }

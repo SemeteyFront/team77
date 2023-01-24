@@ -24,22 +24,30 @@ const LoginPage = () => {
 								</div>
 
 								<div className="login__input-Div">
-									<label>Email адрес</label>
+									<label className='login__email-lable'>Email адрес</label>
 									<input type="email" className="login__email-input"/>
 								</div>
-								<br />
+					
 
 								<div className="login__input-Div">
-									<label>Пароль</label>
+									<label className='login__password-lable'>Пароль</label>
 									<input type="password" className="login__password-input"/>
 								</div>
-								<br />
-								
+							
+								<div className="login__btn-div">
 									<button type="submit" className="login__btn">
 										Войти
 									</button>
+								</div>
 									<div className="login__forgot-pass">
 										<Link to='/forgotpass' className="login__forgot-pass-link">Забыли пароль?</Link>
+									</div>
+						
+									<div className="login__form-double">
+										<p>Нет аккаунта?
+											<br />
+											<Link className='login__form-double-link' to='/register'>Зарегистрироваться</Link>
+										</p>
 									</div>
 								
 									<p className='login__article'>Или войти с помощью</p>

@@ -22,36 +22,47 @@ const RegisterPage = () => {
 									</p>
 								</div>
 								<div className="register__input-Div">
-									<label>Имя пользователя</label>
+									<label className='register__username-lable'>Имя пользователя</label>
 									<input type="username" className="register__username-input"/>
 								</div>
-								<br />
+								
 								<div className="register__input-Div">
-									<label>Email адрес</label>
+									<label className='register__email-lable'>Email адрес</label>
 									<input type="email" className="register__email-input"/>
 								</div>
-								<br />
+								
 								<div className="register__input-Div">
-									<label>Пароль</label>
+									<label className='register__password-lable'>Пароль</label>
 									<input type="password" className="register__password-input"/>
 								</div>
-								<br />
+								
 								<div className="register__flex-Div">
 									<div className="register__checkbox-Div">
-										<label className="register__lable" htmlFor="checkbox"><span>Принять условия</span></label>
+										<label className="register__checkbox-lable" htmlFor="checkbox"><span>Принять условия</span></label>
 										<div className="register__checkbox"></div>
 									</div>
-									<button type="submit" className="register__btn">
-										Зарегистрироваться
-									</button>
-								</div>
-								<p>Или войти с помощью</p>
-								<div className="register__gf">
-									<div className="google__signin">
-										<Link to="#google" className="google__signin-link">Google</Link>
+									<div className="register__btn-div">
+										<button type="submit" className="register__btn">
+										  Зарегистрироваться
+									   </button>
 									</div>
-									<div className="facebook__signin">
-										<Link to="#facebook" className="facebook__signin-link">Facebook</Link>
+								</div>
+								<div className="register__forgot-pass">
+									<Link to='/forgotpass' className="register__forgot-pass-link">Забыли пароль?</Link>
+								</div>
+								<div className="register__form-double">
+									<p>Уже есть аккаунт?
+										<br />
+										<Link to='/login'>Войти</Link>
+									</p>
+								</div>
+								<p className='register__article'>Или войти с помощью</p>
+								<div className="register__gf">
+									<div className="google__signup">
+										<Link to="#google" className="google__signup-link">Google</Link>
+									</div>
+									<div className="facebook__signup">
+										<Link to="#facebook" className="facebook__signup-link">Facebook</Link>
 									</div>
 								</div>
 							</div>
