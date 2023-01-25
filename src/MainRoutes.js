@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import Courses from './pages/Courses';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import ModulesPage from './pages/ModulesPage';
@@ -15,6 +16,7 @@ const MainRoutes = () => {
 				<Route path='/login' element={<LoginPage/>}/>
 				<Route path='/modules' element={<ModulesPage/>}/>
 				<Route path='/profile' element={<ProfilePage/>}/>
+				<Route path='/courses' element={<Courses/>}/>
 			</Routes>
 		</>
 	)

@@ -1,93 +1,85 @@
 import React from 'react'
-import burger from './images/Burger.png'
-import logo from './images/SoloEng.png'
-import dashboard from './images/IconsMenuWhite/Dashboard.png'
-import projects from './images/IconsMenuWhite/projects.png'
-import vector from './images/IconsMenuWhite/vector.png'
-import crown from './images/crown.png'
-import logout from './images/crown.png'
-import avatar from './images/AvatarPurple.png'
+import logo from '../../images/soloLogo.png'
+import dashboard from '../../images/dashboard.png'
+// import courses from '../../images/courses.png'
+import blackCourses from '../../images/blackCourse.png'
+import vocabulary from '../../images/vocabulary.png'
+import crown from '../../images/crown.png'
+import logout from '../../images/logout.png'
+import search from '../../images/search.png'
+import profile from '../../images/profile.png'
+import './courses.scss'
 
 function Courses() {
   return (
-    <div id="site">
-      <button id="burger">
-        <img id="burger-image" src={burger} alt="burger" />
-      </button>
-      <div id="menu">
-        <button id="logo">
-          <img class="iconsMenu" src={logo} alt="logo" />
-        </button>
-
-        <button class="menu">
-          <img
-            class="iconsMenu"
-            src={dashboard}
-            alt="dashboard"
-          />
-          Главная
-        </button>
-        <button class="menu">
-          <img
-            class="iconsMenu"
-            src={projects}
-            alt="projets"
-          />
-          Курсы
-        </button>
-        <button class="menu">
-          <img
-            class="iconsMenu"
-            src={vector}
-            alt=""
-          />
-          Словарь
-        </button>
-        <button class="menu">
-          <img id="iconsMenuKing" src={crown} alt="crown" /> Рейтинг
-        </button>
-
-        <button class="menuOut">
-          <img
-            class="iconsMenu"
-            src={logout}
-            alt=""
-          />
-          Выйти
-        </button>
-      </div>
-      <div id="navbar">
-        <h2>Hi Jay Park!</h2>
-        <input type="search" />
-        <img src={avatar} id="avatar" alt="" />
-      </div>
-      <div id="panel">
-        <h3>Изучай больше</h3>
-        <div id="levels">
-          <div class="level1">A 1</div>
-          <div class="level2">A 2</div>
-          <div class="level3">B 1</div>
-          <div class="level4">B 2</div>
-          <div class="level5">C 1</div>
+    <div className='courses'>
+      <div className='rightHome'>
+        <div className='logo'>
+          <img src={logo} alt="logo" />
+          <p className='logoText'>SoloEng</p>
+        </div>
+        <nav>
+          <ul className='lists'>
+            <li className='list'>
+              <img className='lists_img' src={dashboard} alt="Главная" />
+              <p>Главная</p>
+            </li>
+            <li className='list'>
+              <img className='lists_img' src={blackCourses} alt="Курсы" />
+              <p>Курсы</p>
+              </li>
+            <li className='list'>
+              <img className='lists_img' src={vocabulary} alt="Словарь" />
+              <p>Словарь</p>
+            </li>
+            <li className='list'>
+              <img className='lists_img' src={crown} alt="Рейтинг" />
+              <p>Рейтинг</p>
+            </li>
+          </ul>
+        </nav>
+        <div className='logout'>
+          <img src={logout} alt="" />
+          <p>Выйти</p>
         </div>
       </div>
-      <div id="courses">
-        <div class="card1">
-          <div class="picture"></div>
-          <div class="description">
-            <h5>Embark On The Journey Of Becoming An Artist</h5>
-            <div class="processes">
-              <p>0% Complete</p>
-              <div class="process" />
+      
+      <div className='course'>
+        <div className='course__header'>
+          <p className='header__text'>Hi Jay Park!</p>
+          <div className='header__search'>
+            <div>
+              <input
+                type='search' 
+                placeholder='search' 
+                className='header__input'/>
+              <img className='header__search-icon' src={search} alt="search" />
             </div>
-            <button onclick="ClickMouse()" class="btnCourses">
-              Подписаться
-            </button>
-            <div id="rating"></div>
+            <img src={profile} alt="profile" />
+          </div>
+        </div>
+        <div className='course__banner'>
+          <h2 className='banner__text'>Изучай больше</h2>
+          <div className='banner__btns'>
+            <button className='banner__btn'>A 1</button>
+            <button className='banner__btn'>A 2</button>
+            <button className='banner__btn'>B 1</button>
+            <button className='banner__btn'>B 2</button>
+            <button className='banner__btn'>C 1</button>
+          </div>
+        </div>
+        <div className="course__content">
+          <div className='content__data'>
+            <div className='data__play'></div>
+            <div className='data__more'>
+            </div>
+          </div>
+          <div className='content__data'>
+            <div className='data__play'></div>
+            <div className='data__more'></div>
           </div>
         </div>
       </div>
-
     </div>
   )
 }
