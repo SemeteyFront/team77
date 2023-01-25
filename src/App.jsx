@@ -3,12 +3,12 @@ import MainRoutes from './MainRoutes';
 import HomePage from './pages/HomePage';
 
 function App() {
-	return (
-		<div>
-			<HomePage/>
-			<MainRoutes/>
-		</div>
-	);
+		return (
+				<div>
+						<HomePage/>
+						<MainRoutes/>
+				</div>
+		);
 }
 
 export default App;
