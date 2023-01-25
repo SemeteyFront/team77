@@ -35,6 +35,11 @@ const RegisterPage = () => {
 									<label className='register__password-lable'>Пароль</label>
 									<input type="password" className="register__password-input"/>
 								</div>
+
+								<div className="register__input-Div">
+									<label className='register__confirm-pass-lable'>Подтвердите пароль</label>
+									<input type="password" className="register__confirm-pass-input"/>
+								</div>
 								
 								<div className="register__flex-Div">
 									<div className="register__checkbox-Div">
