@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logoNavbar from '../images/logo-navbar.png';
 import burgerIcon from '../images/burger.png';
-import searchIcon from '../images/search.png';
+import searchIcon from '../images/search-icon.png';
 import profileIcon from '../images/profile.png';
 import './testPage.css';
 
