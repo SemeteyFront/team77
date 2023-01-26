@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logoNavbar from '../images/logo-navbar.png';
 import burgerIcon from '../images/burger.png';
 import searchIcon from '../images/search.png';
@@ -12,9 +13,9 @@ const TestPage = () => {
 				<div className="test__wrapper">
 					<div className="test__navbar">
 						<div className="test__logo">
-							<a href="#" className="test__navbar-logo">
+							<Link to="#" className="test__navbar-logo">
 								<img src={logoNavbar} alt="logo" className="test__navbar-logo-img" />
-							</a>
+							</Link>
 						</div>
 						<div className="test__burger">
 							<img src={burgerIcon} alt="icon" className="test__burger-icon" />
@@ -54,7 +55,7 @@ const TestPage = () => {
 								<input type="text" className="test__input"  placeholder='вариант'/>
 							</div>
 							<button className="test__btn">
-								<a href="#" className="test__btn-link">Далее</a>
+								<Link to="#" className="test__btn-link">Далее</Link>
 							</button>
 						</form>
 					</div>
