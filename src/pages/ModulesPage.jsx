@@ -16,7 +16,7 @@ const ModulesPage = () => {
 				<div className="modules__wrapper">
 					<div className="modules__navbar">
 						<div className="modules__logo">
-							<Link to="#" className="modules__logo-link">
+							<Link to="/" className="modules__logo-link">
 								<img src={logoNavbar} alt="logo" className="modules__logo-img" />
 							</Link>
 						</div>
