@@ -1,6 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import logoNavbar from '../images/logo-navbar.png';
-import searchIcon from '../images/search.png';
+import searchIcon from '../images/search-icon.png';
 import profileIcon from '../images/profile.png';
 import backArrow from '../images/back.png';
 import questionImg from '../images/question-img.png';
@@ -15,9 +16,9 @@ const ModulesPage = () => {
 				<div className="modules__wrapper">
 					<div className="modules__navbar">
 						<div className="modules__logo">
-							<a href="#" className="modules__logo-link">
+							<Link to="#" className="modules__logo-link">
 								<img src={logoNavbar} alt="logo" className="modules__logo-img" />
-							</a>
+							</Link>
 						</div>
 						<div className="modules__burger">
 							<img src={burgerIcon} alt="icon" className="modules__burger-icon" />
@@ -36,25 +37,25 @@ const ModulesPage = () => {
 						</div>
 						<div className="modules__modules-tests">
 							<button className="modules__modules-btn-active">
-								<a href="#" className="active-link">Модуль 1</a>
+								<Link to="#" className="active-link">Модуль 1</Link>
 							</button>
 							<line>
 								<img src={lineIcon} alt="icon" className="modules__modules-line" />
 							</line>
 							<button className="modules__modules-btn">
-								<a href="#" className="modules__modules-btn-link">Модуль 2</a>
+								<Link to="#" className="modules__modules-btn-link">Модуль 2</Link>
 							</button>
 							<line>
 								<img src={lineIcon} alt="icon" className="modules__modules-line" />
 							</line>
 							<button className="modules__modules-btn">
-								<a href="#" className="modules__modules-btn-link">Модуль 3</a>
+								<Link to="#" className="modules__modules-btn-link">Модуль 3</Link>
 							</button>
 							<line>
 								<img src={lineIcon} alt="icon" className="modules__modules-line" />
 							</line>
 							<button className="modules__modules-btn">
-								<a href="#" className="modules__modules-btn-link">Тест</a>
+								<Link to="#" className="modules__modules-btn-link">Тест</Link>
 							</button>
 						</div>
 					</div>
@@ -70,7 +71,7 @@ const ModulesPage = () => {
 						</ul>
 					</div>
 					<button className="modules__question-btn">
-						<a href="#" className="modules__question-link">Продолжить</a>
+						<Link to="#" className="modules__question-link">Продолжить</Link>
 					</button>
 					</div>
 					<div className="modules__question-forms">
@@ -85,7 +86,7 @@ const ModulesPage = () => {
 						</ul>
 					</div>
 					<button className="modules__question-btn">
-						<a href="#" className="modules__question-link">Начать</a>
+						<Link to="#" className="modules__question-link">Начать</Link>
 					</button>
 					</div>
 				</div>

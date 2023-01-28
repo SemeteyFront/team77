@@ -6,7 +6,7 @@ const HomePage = () => {
 	const tokens = JSON.parse(localStorage.getItem('tokens'))
 	console.log(tokens)
 	if(!tokens) {
-		navigate('/register')
+		navigate('/login')
 	}
 
 	// const logout = () => {

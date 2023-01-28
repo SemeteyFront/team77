@@ -18,7 +18,6 @@ const LoginPage = () => {
     let form = new FormData();
     form.append("email", email);
     form.append("password", password);
-		console.log(form)
 
     dispatch(login(form))
     .then(() => navigate('/'));
