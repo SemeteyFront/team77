@@ -1,7 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+	const navigate = useNavigate()
+	const tokens = JSON.parse(localStorage.getItem('tokens'))
+	console.log(tokens)
+	if(!tokens) {
+		navigate('/register')
+	}
+
+	// const logout = () => {
+	// 	localStorage.removeItem('tokens')
+	// }
+	
 	return (
 		<>
 			<Link to='/'>

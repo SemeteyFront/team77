@@ -1,9 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState} from "react";
+import { useDispatch } from "react-redux";
+import { login } from "../redux/slices/authSlice";
+import { Link, useNavigate } from 'react-router-dom';
 import soloEngImg from '../../src/images/logo.png';
 import './loginPage.css';
 
 const LoginPage = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
+  const submitLogin = (e) => {
+    e.preventDefault();
+
+    let form = new FormData();
+    form.append("email", email);
+    form.append("password", password);
+		console.log(form)
+
+    dispatch(login(form))
+    .then(() => navigate('/'));
+  };
+
 	return (
 		<>
 			<main className="login">
@@ -15,7 +36,7 @@ const LoginPage = () => {
 							</div>
 						</div>
 
-						<form className="login__form">
+						<form className="login__form" onSubmit={submitLogin}>
 							<div className="login__form-block">
 								<div className="login__form-link">
 									<p>Нет аккаунта?
@@ -24,30 +45,21 @@ const LoginPage = () => {
 								</div>
 
 								<div className="login__input-Div">
-									<label className='login__email-lable'>Email адрес</label>
-									<input type="email" className="login__email-input"/>
+									<label>Email адрес</label>
+									<input type="email" className="login__email-input" placeholder="user@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
 								</div>
-					
+								<br />
 
 								<div className="login__input-Div">
-									<label className='login__password-lable'>Пароль</label>
-									<input type="password" className="login__password-input"/>
+									<label>Пароль</label>
+									<input type="password" className="login__password-input" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
 								</div>
-							
-								<div className="login__btn-div">
+								
 									<button type="submit" className="login__btn">
 										Войти
 									</button>
-								</div>
 									<div className="login__forgot-pass">
 										<Link to='/forgotpass' className="login__forgot-pass-link">Забыли пароль?</Link>
-									</div>
-						
-									<div className="login__form-double">
-										<p>Нет аккаунта?
-											<br />
-											<Link className='login__form-double-link' to='/register'>Зарегистрироваться</Link>
-										</p>
 									</div>
 								
 									<p className='login__article'>Или войти с помощью</p>
