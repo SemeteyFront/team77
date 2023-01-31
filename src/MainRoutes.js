@@ -7,6 +7,7 @@ import ModulesPage from './pages/ModulesPage';
 import RegisterPage from './pages/RegisterPage';
 import ProfilePage from '../src/pages/ProfilePage';
 import TestPage from './pages/TestPage';
+import DashboardPage from './pages/DashboardPage';
 
 const MainRoutes = () => {
 	return (
@@ -15,6 +16,7 @@ const MainRoutes = () => {
 				<Route path='/' element={<HomePage/>}/>
 				<Route path='/register' element={<RegisterPage/>}/>
 				<Route path='/login' element={<LoginPage/>}/>
+				<Route path='/dashboard' element={<DashboardPage/>}/>
 				<Route path='/modules' element={<ModulesPage/>}/>
 				<Route path='/profile' element={<ProfilePage/>}/>
 				<Route path='/test' element={<TestPage/>}/>
