@@ -14,12 +14,12 @@ const LoginPage = () => {
 
   const submitLogin = (e) => {
     e.preventDefault();
-
+		localStorage.setItem('email', email)
     let form = new FormData();
     form.append("email", email);
     form.append("password", password);
 
-    dispatch(login(form))
+    dispatch(login({form}))
     .then(() => navigate('/'));
   };
 

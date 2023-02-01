@@ -4,14 +4,18 @@ import { Link, useNavigate } from 'react-router-dom';
 const HomePage = () => {
 	const navigate = useNavigate()
 	const tokens = JSON.parse(localStorage.getItem('tokens'))
+	// const email = localStorage.getItem('email')
+	// console.log(email)
 	console.log(tokens)
-	if(!tokens) {
-		navigate('/login')
-	}
+	// if(!tokens) {
+	// 	navigate('/login')
+	// }
 
 	// const logout = () => {
 	// 	localStorage.removeItem('tokens')
 	// }
+
+	localStorage.removeItem('iconify-version')
 	
 	return (
 		<>
