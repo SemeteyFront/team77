@@ -1,11 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../images/soloLogo.png';
-import dashboard from '../images/dashboard.png';
-import blackCourses from '../images/blackCourse.png';
-import vocabulary from '../images/vocabulary.png';
-import crown from '../images/crown.png';
-import logout from '../images/logout.png';
 import burgerIcon from '../images/burger.png';
 import searchIcon from '../images/search-icon.png';
 import profileIcon from '../images/profile.png';
@@ -14,47 +8,18 @@ import editIcon from '../images/edit-icon.png';
 import yellowLine from '../images/yellow-line.png';
 import grayLine from '../images/gray-line.png';
 import blueLine from '../images/blue-line.png';
-import indicatorIcon from '../images/indicator.png';
+// import indicatorIcon from '../images/indicator.png';
 import ratingIcon from '../images/rating.png';
 import greenIndicator from '../images/green-indicator.png';
 import './dashboardPage.css';
+import SideBar from '../SideBar';
 
 const DashboardPage = () => {
 	return (
 		<main className='dashboard'>
 			<div className="dashboard__container">
 				<div className="dashboard__wrapper">
-					<div className='rightHome'>
-						<div className='logo'>
-							<img src={logo} alt="logo" />
-							<p className='logoText'>SoloEng</p>
-						</div>
-						<nav>
-							<ul className='lists'>
-								<li className='list'>
-									<img className='lists_img' src={dashboard} alt="Главная" />
-									<p>Главная</p>
-								</li>
-								<li className='list'>
-									<img className='lists_img' src={blackCourses} alt="Курсы" />
-									<p>Курсы</p>
-								</li>
-								<li className='list'>
-									<img className='lists_img' src={vocabulary} alt="Словарь" />
-									<p>Словарь</p>
-								</li>
-								<li className='list'>
-									<img className='lists_img' src={crown} alt="Рейтинг" />
-									<p>Рейтинг</p>
-								</li>
-							</ul>
-						</nav>
-						<div className='logout'>
-							<img src={logout} alt="" />
-							<p>Выйти</p>
-						</div>
-					</div>
-
+					<SideBar/>
 					<div className="dashboard__main-block">
 						<div className="dashboard__navbar">
 							<div className="dashboard__burger">

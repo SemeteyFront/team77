@@ -4,65 +4,6 @@
 	justify-content: center;
 }
 
-.rightHome {
-	width: 328px;
-	height: 1023px;
-	background-color: #7573F2;
-}
-
-.logo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-right: 59px;
-	padding-top: 37px;
-	margin-bottom: 97px;
-	gap: 6px;
-}
-
-.logoText {
-	font-weight: 600;
-	font-size: 22px;
-	color: #fff;
-}
-
-.lists {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 124px;
-}
-
-.list {
-	width: 336px;
-	height: 63px;
-	display: flex;
-	align-items: center;
-	column-gap: 19px;
-	color: #fff;
-	margin-left: -30px;
-	padding: 0 128px 0 85px;
-	border-radius: 8.4px;
-	margin-bottom: 70px;
-}
-
-.lists_img {
-	width: 35px;
-	color: #fff;
-}
-
-li:nth-child(2) {
-	/* background-color: #fff; */
-	color: #fff;
-}
-
-.logout {
-	display: flex;
-	justify-content: center;
-	margin-right: 56px;
-	gap: 19px;
-	color: #fff;
-}
-
 .profile__main-block {
 	width: 1112px;
 	padding: 22px 57px 0 84px;
