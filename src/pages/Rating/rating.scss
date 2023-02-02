@@ -43,7 +43,7 @@
         }
       }
   
-      .list:nth-child(2) {
+      li:nth-child(2) {
         background-color: #fff;
         color: #333539;
       }
@@ -130,10 +130,10 @@
       color: #5D70CE;
     }
 
-    // .banner__btn:nth-child(2) {
-    //   background-color: #5D70CE;
-    //   color: #FDFDFD;
-    // }
+    .banner__btn:nth-child(2) {
+      background-color: #5D70CE;
+      color: #FDFDFD;
+    }
   }
 
   .course__content {
@@ -152,11 +152,6 @@
         border: 1px solid #C4C4C4;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-
-        img {
-          width: inherit;
-          height: inherit;
-        }
       }
 
       .data__more {
@@ -165,15 +160,7 @@
         background-color: #FFFFFF;
         border: 1px solid #C4C4C4;
         border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-
-        p {
-          text-align: center;
-        }
+        border-bottom-right-radius: 10px; 
       }
     }
   }

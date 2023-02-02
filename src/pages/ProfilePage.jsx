@@ -1,102 +1,91 @@
-// import React from 'react';
-// import soloEng from '../src/images/logo-navbar.png';
-// import dashboardIcon from '../src/images/dashboard.png';
-// import coursesIcon from '../src/images/courses.png';
-// import vocabularyIcon from '../src/images/vocabulary.png';
-// import crownIcon from '../src/images/crown.png';
-// import logoutIcon from '../src/images/logout.png';
-// import searchIcon from '../src/images/search.png';
-// import profileIcon from '../src/images/profile.png';
-// import indicatorIcon from '../src/images/indicator.png';
-// import ratingIcon from '../src/images/rating.png';
-// import './profilePage.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import burgerIcon from '../images/burger.png';
+import searchIcon from '../images/search-icon.png';
+import profileIcon from '../images/profile.png';
+import indicatorIcon from '../images/indicator.png';
+import ratingIcon from '../images/rating.png';
+import greenIndicator from '../images/green-indicator.png';
+import SideBar from '../SideBar';
+import './profilePage.css';
 
-// const ProfilePage = () => {
-// 	return (
-// 		<main className='profile'>
-// 			<div className="profile__container">
-// 				<div className="profile__wrapper">
-// 					<div className="profile__sidebar">
-// 						<img src={soloEng} alt="logo" className="profile__sidebar-logo" />
-// 						<div className="profile__sidebar-category">
-// 							<div className="profile__dashboard">
-// 								<img src={dashboardIcon} alt="icon" className="profile__dashboard-icon" />
-// 								<p className="profile__dashboard-text">Главная</p>
-// 							</div>
-// 							<div className="profile__courses">
-// 								<img src={coursesIcon} alt="icon" className="profile__courses-icon" />
-// 								<p className="profile__courses-text">Курсы</p>
-// 							</div>
-// 							<div className="profile__courses">
-// 								<img src={vocabularyIcon} alt="icon" className="profile__vocabulary-icon" />
-// 								<p className="profile__vocabulary-text">Словарь</p>
-// 							</div>
-// 							<div className="profile__courses">
-// 								<img src={crownIcon} alt="icon" className="profile__crown-icon" />
-// 								<p className="profile__crown-text">Рейтинг</p>
-// 							</div>
-// 						</div>
-// 						<div className="profile__sidebar-logout">
-// 							<img src={logoutIcon} alt="icon" className="profile__logout-icon" />
-// 							<p className="profile__logout-text">Выйти</p>
-// 						</div>
-// 					</div>
-// 					<div className="profile__main-block">
-// 						<div className="profile__main-navbar">
-// 							<img src={searchIcon} alt="icon" className="profile__searc-icon" />
-// 							<img src={profileIcon} alt="icon" className="profile__profile-icon" />
-// 						</div>
-// 						<div className="profile__change-navbar">
-// 							<img src={profileIcon} alt="icon" className="profile__avatar-icon" />
-// 							<p className="profile__change-text">Jay Park</p>
-// 							<button className="profile__change-btn">
-// 								<a href="#" className="profile_change-btn-link">Изменить</a>
-// 							</button>
-// 						</div>
-// 						<div className="profile__courses">
-// 							<h2 className="profile__courses-title">Мои курсы</h2>
-// 							<div className="profile__courses-content">
-// 								<div className="profile__img-placeholder">
+const ProfilePage = () => {
+	return (
+		<main className='profile'>
+			<div className="profile__container">
+				<div className="profile__wrapper">
+					<SideBar/>
+					<div className="profile__main-block">
+						<div className="profile__main-navbar">
+							<div className="profile__burger">
+								<img src={burgerIcon} alt="icon" className="profile__burger-icon" />
+							</div>
+							<p className="profile__content">Hi Jay Park!</p>
+							<img src={searchIcon} alt="icon" className="profile__searc-icon" />
+							<img src={profileIcon} alt="icon" className="profile__profile-icon" />
+						</div>
+						<div className="profile__change-navbar">
+							<img src={profileIcon} alt="icon" className="profile__avatar-icon" />
+							<p className="profile__change-text">Jay Park</p>
+								<Link to="#" className="profile_change-btn-link">Изменить</Link>
+						</div>
+						<div className="profile__courses-title">Мои курсы</div>
+						<div className="profile__courses">
+							<div className="profile__courses-content">
+								<div className="profile__img-placeholder">
 
-// 								</div>
-// 								<div className="profile__rating-container">
-// 									<p className="profile__rating-text">Embark On The Journey Of Becoming An Artist </p>
-// 									<div className="profile__rating-indicator">
-// 										<p className="profile__process">65% в процессе</p>
-// 										<img src={indicatorIcon} alt="icon" className="prifile__indicator" />	
-// 									</div>
-// 									<div className="profile__rating-stars">
-// 										<button className="profile__rating-btn">
-// 											<a href="#" className="profile__rating-btn-link">Вы подписаны</a>
-// 											<img src={ratingIcon} alt="" className="profile__rating-icon" />
-// 										</button>
-// 									</div>
-// 								</div>
-// 							</div>
+								</div>
+								<div className="profile__rating-container">
+									<p className="profile__rating-text">Embark On The Journey <br /> Of Becoming An Artist </p>
+									<p className="profile__name-text">Название курса </p>
+									<div className="profile__rating-indicator">
+										<p className="profile__process">65% в процессе</p>
+										<p className="profile__complete">100% Complete</p>
+										<img src={indicatorIcon} alt="icon" className="profile__indicator" />
+										<img src={greenIndicator} alt="icon" className="profile__green-indicator" />	
+									</div>
+									<div className="profile__rating-stars">
+										<button className="profile__rating-btn">
+											<Link to="#" className="profile__rating-btn-link">Вы подписаны</Link>
+										</button>
+										<button className="profile__complete-btn">
+											Завершено
+										</button>
+										<img src={ratingIcon} alt="" className="profile__rating-icon" />
+									</div>
+								</div>
+							</div>
 
-// 							<div className="profile__courses-content">
-// 								<div className="profile__img-placeholder">
+							<div className="profile__courses-content">
+								<div className="profile__img-placeholder">
 
-// 								</div>
-// 								<div className="profile__rating-container">
-// 									<p className="profile__rating-text">Embark On The Journey Of Becoming An Artist </p>
-// 									<div className="profile__rating-indicator">
-// 										<p className="profile__process">0%</p>	
-// 									</div>
-// 									<div className="profile__rating-stars">
-// 										<button className="profile__rating-btn">
-// 											<a href="#" className="profile__rating-btn-link">Вы подписаны</a>
-// 											<img src={ratingIcon} alt="" className="profile__rating-icon" />
-// 										</button>
-// 									</div>
-// 								</div>
-// 							</div>
-// 						</div>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</main>
-// 	)
-// }
+								</div>
+								<div className="profile__rating-container">
+									<p className="profile__rating-text">Embark On The Journey <br /> Of Becoming An Artist </p>
+									<p className="profile__name-text">Название курса </p>
+									<div className="profile__rating-indicator">
+										<p className="profile__process">0%</p>
+										<p className="profile__complete">100% Complete</p>	
+										<img src={indicatorIcon} alt="icon" className="profile__indicator" />
+										<img src={greenIndicator} alt="icon" className="profile__green-indicator" />
+									</div>
+									<div className="profile__rating-stars">
+										<button className="profile__rating-btn">
+											<Link to="#" className="profile__rating-btn-link">Вы подписаны</Link>
+										</button>
+										<button className="profile__complete-btn">
+											Завершено
+										</button>
+										<img src={ratingIcon} alt="" className="profile__rating-icon" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	)
+}
 
-// export default ProfilePage;
+export default ProfilePage;

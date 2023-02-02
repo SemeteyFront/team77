@@ -4,6 +4,7 @@ import { login } from "../redux/slices/authSlice";
 import { Link, useNavigate } from 'react-router-dom';
 import soloEngImg from '../../src/images/logo.png';
 import './loginPage.css';
+
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -20,7 +21,7 @@ const LoginPage = () => {
     form.append("password", password);
 
     dispatch(login(form))
-    .then(() => navigate('/'));
+    .then(() => navigate('/courses'));
   };
 
 	return (
@@ -52,7 +53,6 @@ const LoginPage = () => {
 									<label>Пароль</label>
 									<input type="password" className="login__password-input" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
 								</div>
-								<br />
 								
 									<button type="submit" className="login__btn">
 										Войти

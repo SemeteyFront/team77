@@ -1,14 +1,378 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap');
-
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+.profile__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-body {
-	font-family: 'Mulish', sans-serif;
-	font-style: normal;
-	background: #F5F5F5;
-	overflow-x: hidden;
-} */
+.profile__main-block {
+	width: 1112px;
+	padding: 22px 57px 0 84px;
+}
+
+.profile__main-navbar {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-bottom: 30px;
+}
+
+.profile__burger {
+	display: none;
+}
+
+.profile__content {
+	display: none;
+}
+
+.profile__searc-icon {
+	margin-right: 42.27px;
+}
+
+.profile__change-navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 114px;
+}
+
+.profile__avatar-icon {
+	width: 219px;
+	height: 219px;
+}
+
+.profile__change-text {
+	font-weight: 700;
+	font-size: 34px;
+	line-height: 25px;
+	letter-spacing: 0.267682px;
+	color: #333539;
+	margin-right: 300px;
+}
+
+.profile_change-btn-link {
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 25px;
+	letter-spacing: 0.267682px;
+	text-decoration-line: underline;
+	color: #333539;
+}
+
+.profile__courses-title {
+	font-weight: 600;
+	font-size: 34px;
+	line-height: 25px;
+	letter-spacing: 0.267682px;
+	color: #333539;
+	margin-bottom: 50px;
+}
+
+.profile__courses {
+	display: flex;
+	align-items: center;
+}
+
+.profile__courses-content+.profile__courses-content {
+	margin-left: 76px;
+}
+
+.profile__img-placeholder {
+	width: 303px;
+	height: 208px;
+	background: #C4C4C4;
+	border: 1px solid #C4C4C4;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.profile__rating-container {
+	padding: 13px 17px 18px 30px;
+	border: 1px solid #C4C4C4;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.profile__rating-text {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 152.34%;
+	text-align: justify;
+	color: #5C5C5C;
+	margin-bottom: 6px;
+}
+
+.profile__name-text {
+	display: none;
+}
+
+.profile__green-indicator {
+	display: none;
+}
+
+.profile__process {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 152.34%;
+	color: #5C5C5C;
+	margin-bottom: 6px;
+}
+
+.profile__complete {
+	display: none;
+}
+
+.profile__rating-stars {
+	display: flex;
+	align-items: center;
+	margin-top: 23px;
+}
+
+.profile__rating-btn {
+	width: 111px;
+	height: 32px;
+	background: #54CE37;
+	border-radius: 6.04231px;
+	border: none;
+	margin-right: 25px;
+}
+
+.profile__rating-btn-link {
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 15px;
+	color: #EFEFFF;
+	text-decoration: none;
+}
+
+.profile__complete-btn {
+	display: none;
+}
+
+
+/*------------Media ------------*/
+
+@media (max-width: 800px) {
+
+	.profile__container {
+		width: 744px;
+		height: 1157px;
+		margin: 0 auto;
+		overflow-x: hidden;
+		padding: 45px 40px 0 40px;
+	}
+
+	.rightHome {
+		display: none;
+	}
+
+	.profile__main-block {
+		width: 100%;
+		padding: 16px 20px 0 20px;
+	}
+
+	.profile__main-navbar {
+		justify-content: space-between;
+		margin-bottom: 68px;
+	}
+
+	.profile__burger {
+		display: block;
+	}
+
+	.profile__content {
+		display: block;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 25px;
+		letter-spacing: 0.267682px;
+		color: #6672FB;
+		margin-right: 100px;
+	}
+
+	.profile__searc-icon {
+		margin-right: 0;
+	}
+
+	.profile__change-navbar {
+		margin-bottom: 121px;
+	}
+
+	.profile__change-text {
+		margin-right: 101px;
+	}
+
+	.profile_change-btn-link {
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	.profile__courses-title {
+		padding-left: 0;
+		margin-bottom: 39px;
+	}
+
+	.profile__courses-content+.profile__courses-content {
+		margin-left: 23px;
+	}
+
+	.profile__process {
+		display: none;
+	}
+
+	.profile__complete {
+		display: block;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 152.34%;
+		color: #5C5C5C;
+	}
+
+	.profile__rating-btn {
+		display: none;
+	}
+
+	.profile__complete-btn {
+		display: block;
+		width: 111px;
+		height: 32px;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 15px;
+		color: #EFEFFF;
+		background: #54CE37;
+		border-radius: 6.04231px;
+		border: none;
+		margin-right: 32px;
+	}
+}
+
+@media (max-width: 575px) {
+	.profile__container {
+		width: 320px;
+		height: 1280px;
+		padding: 13px 16px 0 16px;
+		overflow-y: hidden;
+	}
+
+	.profile__main-block {
+		width: 100%;
+		padding: 0;
+	}
+
+	.profile__main-navbar {
+		margin-bottom: 26px;
+	}
+
+	.profile__burger-icon {
+		width: 45.5px;
+	}
+
+	.profile__content {
+		display: none;
+	}
+
+	.profile__searc-icon {
+		width: 60.02px;
+		height: 18.47px;
+		margin-left: 100px;
+	}
+
+	.profile__profile-icon {
+		width: 38px;
+		height: 38px;
+	}
+
+	.profile__change-navbar {
+		flex-direction: column;
+		margin-bottom: 62px;
+	}
+
+	.profile__avatar-icon {
+		width: 104.16px;
+		height: 104.16px;
+		margin-bottom: 20px;
+	}
+
+	.profile__change-text {
+		font-size: 17.92px;
+		line-height: 8px;
+		margin: 0 0 40px 0;
+	}
+
+	.profile_change-btn-link {
+		font-size: 18px;
+		line-height: 7px;
+		margin-bottom: 62px;
+	}
+
+	.profile__courses-title {
+		font-size: 20px;
+		line-height: 11px;
+		padding-left: 53px;
+		margin-bottom: 20px;
+	}
+
+	.profile__courses {
+		flex-direction: column;
+	}
+
+	.profile__courses-content {
+		margin-bottom: 30px;
+	}
+
+	.profile__courses-content+.profile__courses-content {
+		margin-left: 0;
+	}
+
+	.profile__img-placeholder {
+		width: 184px;
+		height: 126.31px;
+	}
+
+	.profile__rating-container {
+		width: 184px;
+		height: 126.31px;
+		padding: 6px 10px 8px 10px;
+
+	}
+
+	.profile__rating-text {
+		display: none;
+	}
+
+	.profile__name-text {
+		display: block;
+		font-weight: 700;
+		font-size: 15px;
+		line-height: 152.34%;
+		text-align: justify;
+		color: #5C5C5C;
+		margin-bottom: 8px;
+	}
+
+	.profile__indicator {
+		display: none;
+	}
+
+	.profile__green-indicator {
+		display: block;
+	}
+
+	.profile__rating-stars {
+		margin-top: 11px;
+	}
+
+	.profile__complete-btn {
+		width: 77.17px;
+		height: 22.25px;
+		font-size: 8.34255px;
+		line-height: 10px;
+		border-radius: 4.20069px;
+		margin-right: 7.83px;
+	}
+
+	.profile__rating-icon {
+		width: 79px;
+		height: 11.42px;
+	}
+}

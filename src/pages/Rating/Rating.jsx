@@ -6,49 +6,22 @@ import blackCourses from '../../images/blackCourse.png'
 import vocabulary from '../../images/vocabulary.png'
 import crown from '../../images/crown.png'
 import logout from '../../images/logout.png'
-import search from '../../images/search.png'
-import profile from '../../images/profile.png'
-import './courses.scss'
+// import search from '../../images/search.png'
+// import profile from '../../images/profile.png'
+import './rating.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { getCourses } from '../../redux/slices/getCourses'
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { getRating } from '../../redux/slices/getRating'
 
-function Courses() {
-  const arr = ['A1', 'A2', 'B1', 'B2', 'C1']
-  const [level, setLevel] = useState(arr[0])
+function Rating() {
   const dispatch = useDispatch()
-  const { courses } = useSelector(state => state.courses)
+  const { rating } = useSelector(state => state.rating)
+  console.log(rating)
 
   useEffect(() => {
-    dispatch(getCourses())
+    dispatch(getRating())
   }, [dispatch])
 
-  const levels = (level) => {
-    setLevel(level)
-  }
-  console.log(level)
-
-  const course = courses &&
-  courses.filter(course => course.cours_lev === level).map(course => {
-    return (
-      <Link
-        to={`/modules/${course.slug}`}
-        key={course.image}
-        className='content__data'
-      >
-        <div className='data__play'>
-          <img src={course.image} alt="" />
-        </div>
-        <div className='data__more'>
-          <p>{course.title}</p>
-        </div>
-      </Link>
-    )
-  })
-
-  console.log(course)
   return (
     <div className='courses'>
       <div className='rightHome'>
@@ -58,22 +31,22 @@ function Courses() {
         </div>
         <nav>
           <ul className='lists'>
-            <Link to={'/'} className='list'>
+            <li className='list'>
               <img className='lists_img' src={dashboard} alt="Главная" />
               <p>Главная</p>
-            </Link>
-            <Link to={'/courses'} className='list'>
+            </li>
+            <li className='list'>
               <img className='lists_img' src={blackCourses} alt="Курсы" />
               <p>Курсы</p>
-            </Link>
+              </li>
             <li className='list'>
               <img className='lists_img' src={vocabulary} alt="Словарь" />
               <p>Словарь</p>
             </li>
-            <Link to={'/rating'} className='list'>
+            <li className='list'>
               <img className='lists_img' src={crown} alt="Рейтинг" />
-              <p>Рейтинг</p> 
-            </Link>
+              <p>Рейтинг</p>
+            </li>
           </ul>
         </nav>
         <div className='logout'>
@@ -82,7 +55,7 @@ function Courses() {
         </div>
       </div>
       
-      <div className='course'>
+      {/* <div className='course'>
         <div className='course__header'>
           <p className='header__text'>Hi Jay Park!</p>
           <div className='header__search'>
@@ -99,29 +72,27 @@ function Courses() {
         <div className='course__banner'>
           <h2 className='banner__text'>Изучай больше</h2>
           <div className='banner__btns'>
-            {
-              arr && arr.map(btn => {
-                return (
-                  <button
-                    key={btn}
-                    className='banner__btn'
-                    onClick={() => levels(btn)}
-                    >{
-                      btn}
-                    </button>
-                )
-              })
-            }
+            <button className='banner__btn'>A 1</button>
+            <button className='banner__btn'>A 2</button>
+            <button className='banner__btn'>B 1</button>
+            <button className='banner__btn'>B 2</button>
+            <button className='banner__btn'>C 1</button>
           </div>
         </div>
         <div className="course__content">
-          {
-            course
-          }
+          <div className='content__data'>
+            <div className='data__play'></div>
+            <div className='data__more'>
+            </div>
+          </div>
+          <div className='content__data'>
+            <div className='data__play'></div>
+            <div className='data__more'></div>
+          </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
 
-export default Courses
+export default Rating

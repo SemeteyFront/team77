@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import logoNavbar from '../images/logo-navbar.png';
 import searchIcon from '../images/search-icon.png';
 import profileIcon from '../images/profile.png';
@@ -8,15 +8,26 @@ import questionImg from '../images/question-img.png';
 import burgerIcon from '../images/burger.png';
 import lineIcon from '../images/line-11.svg';
 import './modulesPage.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { CoursesById } from '../redux/slices/getCourses';
 
 const ModulesPage = () => {
+	const { id } = useParams()
+	const dispatch = useDispatch()
+	const courseID = useSelector(state => state.courses.id)
+	console.log(courseID)
+
+	useEffect(() => {
+		dispatch(CoursesById(id))
+	}, [dispatch])
 	return (
 		<main className='modules'>
 			<div className="modules__container">
 				<div className="modules__wrapper">
 					<div className="modules__navbar">
 						<div className="modules__logo">
-							<Link to="#" className="modules__logo-link">
+							<Link to="/" className="modules__logo-link">
 								<img src={logoNavbar} alt="logo" className="modules__logo-img" />
 							</Link>
 						</div>
