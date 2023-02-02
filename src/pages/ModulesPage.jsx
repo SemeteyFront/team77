@@ -11,11 +11,13 @@ import './modulesPage.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { CoursesById } from '../redux/slices/getCourses';
+import { useNavigate } from 'react-router-dom';
 
 const ModulesPage = () => {
 	const { id } = useParams()
 	const dispatch = useDispatch()
 	const courseID = useSelector(state => state.courses.id)
+	const navigate = useNavigate()
 	console.log(courseID)
 
 	useEffect(() => {
@@ -42,29 +44,25 @@ const ModulesPage = () => {
 					</div>
 					<div className="modules__modules-block">
 						<div className="modules__tasks">
-							<img src={backArrow} alt="icon" className="modules__tasks-icon" />
+							<img onClick={() => navigate(-1)} src={backArrow} alt="icon" className="modules__tasks-icon" />
 							<p className="modules__tasks-text">Asking questions in English</p>
 							<p className="modules__tasks-text-2">Название курса</p>
 						</div>
 						<div className="modules__modules-tests">
-							<button className="modules__modules-btn-active">
-								<Link to="#" className="active-link">Модуль 1</Link>
-							</button>
-							<line>
-								<img src={lineIcon} alt="icon" className="modules__modules-line" />
-							</line>
-							<button className="modules__modules-btn">
-								<Link to="#" className="modules__modules-btn-link">Модуль 2</Link>
-							</button>
-							<line>
-								<img src={lineIcon} alt="icon" className="modules__modules-line" />
-							</line>
-							<button className="modules__modules-btn">
-								<Link to="#" className="modules__modules-btn-link">Модуль 3</Link>
-							</button>
-							<line>
-								<img src={lineIcon} alt="icon" className="modules__modules-line" />
-							</line>
+							{
+								courseID &&
+								courseID.moduls.map(btn => {
+									return (
+										<div key={btn.id}>
+											<button className="modules__modules-btn-active">
+												<Link to="#" className="active-link">{btn.title}</Link>
+											</button>
+												<img src={lineIcon} alt="icon" className="modules__modules-line" />
+										</div>
+									)
+								})
+							}
+							
 							<button className="modules__modules-btn">
 								<Link to="#" className="modules__modules-btn-link">Тест</Link>
 							</button>
@@ -72,7 +70,7 @@ const ModulesPage = () => {
 					</div>
 					<div className="modules__question-forms-1">
 						<div className="question__form-img-Div">
-							<img src={questionImg} alt="img" className="modules__question-forms-img" />
+							<img src={courseID && courseID.image} alt="img" className="modules__question-forms-img" />
 						</div>
 					<div className="modules__question-forms-Div">
 						<h2 className="question__forms-title">Question forms</h2>
